@@ -49,7 +49,7 @@ Discussion forum - MVP
 
 ideas
 
--send email to when your questions are answered 
+-send email to when your questions are answered (notification)
 -create some chat to connect with other people who are online
 -create a like or dislike and approve when 10 people likes the answer show the thick mark
 -
@@ -57,3 +57,6 @@ ideas
 questions
 1. how to implement search in this app?
 2. how to peek a keywords from the question being asked?
+
+database looks
+https://docs.google.com/spreadsheets/d/1efq8HX1If4nVSCFuF3BRYWFA2aVvl3to0eZ3bKtEyys/edit#gid=0
