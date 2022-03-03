@@ -1,18 +1,14 @@
+require('dotenv').config();
 const express = require("express");
-const mysql = require("mysql");
 const app = express();
-const port = process.env.port || 5000;
+const jwt = require('jsonwebtoken');
+const port = process.env.PORT;
 
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: '',
-    password: '',
-    database:''
-})
-
-connection.connect((error) => {
-    if (error) throw error;
-    console.log("mysql connection established")
+app.get('/api', (req, res) => {
+    res.json({
+        success: 1,
+        message: 'Connection established'
+    });
 })
 
 app.listen(port, () => console.log(`Listening at http://localhost:${port}`));
