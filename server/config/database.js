@@ -43,9 +43,9 @@ pool.query(question, (err, results2) => {
     if (err) throw err;
     console.log('question table created');
 })
-// pool.query(answer, (err, results2) => {
-//     if (err) throw err;
-//     console.log('question table created');
-// })
+pool.query(answer, (err, results2) => {
+    if (err) throw err;
+    console.log('answer table created');
+})
 
 module.exports = pool;

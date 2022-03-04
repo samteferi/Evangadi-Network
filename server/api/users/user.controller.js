@@ -1,8 +1,8 @@
-const { createTable } = require('./user.service');
+const { create } = require('./user.service');
 
 module.exports = {
-    createRegistrationTable: (req, res) => {
-        createTable(req, (err, results) => {
+    createUser: (req, res) => {
+        create(req, (err, results) => {
             if (err) {
                 console.log(err);
                 return res.status(500).json({ msg: "database connection error" });
