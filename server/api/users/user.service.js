@@ -19,14 +19,16 @@ module.exports = {
             PRIMARY KEY (question_id),
             FOREIGN KEY (user_id) REFERENCES registration(user_id)
         )`;
-        pool.query(registration, (err, results,fields) => {
+
+        pool.query(registration, (err, results, fields) => {
             if (err) return callback(err);
-            return callback(null, results);
-        });
-        // pool.query(question, (err, results,fields) => {
-        //     if (err) return callback(err);
-        //     return callback(null, results);
-        // });
+
+
+            pool.query(question, (err, results2, fields) => {
+                if (err) return callback(err);
+                return callback(null, { results, results2 });
+            })
+        })
     },
 
     //data comes form the user controller
