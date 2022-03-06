@@ -5,11 +5,11 @@ module.exports = {
     create: (data, callback) => {
         pool.query(`INSERT INTO registration(first_name,last_name,user_name,user_email,user_password)VALUES(?,?,?,?,?)`,
             [
-                data.first_name,
-                data.last_name,
-                data.user_name,
-                data.user_email,
-                data.user_password
+                data.firstName,
+                data.lastName,
+                data.userName,
+                data.email,
+                data.password
             ],
             (err, result) => {
                 if (err) {

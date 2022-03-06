@@ -20,7 +20,7 @@ let registration = `CREATE TABLE if not exists registration(
 let question = `CREATE TABLE if not exists question(
     question_id int auto_increment,
     question varchar(255) not null,
-    question_code_block varchar(255) not null,
+    question_code_block varchar(255),
     user_id int not null,
     PRIMARY KEY (question_id),
     FOREIGN KEY (user_id) REFERENCES registration(user_id)
@@ -28,7 +28,7 @@ let question = `CREATE TABLE if not exists question(
 let answer = `CREATE TABLE if not exists answer(
     answer_id int auto_increment,
     answer varchar(255) not null,
-    answer_code_block varchar(255) not null,
+    answer_code_block varchar(255),
     user_id int not null,
     question_id int not null,
     PRIMARY KEY (answer_id),
