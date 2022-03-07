@@ -18,5 +18,13 @@ module.exports = {
                 return callback(null, result);
             }
         );
+    },
+    getUsers: (callback) => {
+        pool.query(`SELECT user_id,first_name,last_name,user_name,user_email FROM registration`, [], (err, result) => {
+            if (err) {
+                 return callback(err);
+            }
+            return callback(null, result);
+         })
     }
 }
