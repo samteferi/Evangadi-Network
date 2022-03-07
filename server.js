@@ -5,16 +5,12 @@ const jwt = require('jsonwebtoken');
 const port = process.env.PORT;
 const userRouter = require('./server/api/users/user.router');
 
-app.use(express.urlencoded({extended: true}));
-app.use("/api/users", userRouter);
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use("/api/users", userRouter);
 
-app.get('/api', (req, res) => {
-    res.json({
-        success: 1,
-        message: 'Connection established'
-    });
-})
+
+
 
 
 
