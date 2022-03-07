@@ -1,4 +1,4 @@
-const { create, getUsers } = require('./user.service');
+const { create, getAllUsers, getUserById } = require('./user.service');
 const bcrypt = require('bcryptjs');
 const pool = require('../../config/database');
 
@@ -49,12 +49,25 @@ module.exports = {
         }
     },
     getUsers: (req, res) => {
-        getUsers((err, results) => {
+        getAllUsers((err, results) => {
             if (err) {
                 console.log(err);
                 return res.status(500).json({ msg: "database connection error" });
             }
             return res.status(200).json({data: results});
+        })
+    },
+    getUserById: (req, res) => {
+        const id = req.params.id;
+        getUserById(id, (err, results) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).json({ msg: "database connection error" })
+            }
+            if (!results) {
+                return res.status(404).json({ msg: "Record not found" });
+            }
+            return res.status(200).json({ data: results})
         })
     }
 }
