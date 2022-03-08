@@ -1,59 +1,52 @@
-const { create, getAllUsers, getUserById, getUserByEmail } = require('./user.service');
+const { register, getAllUsers, getUserById, getUserByEmail } = require('./user.service');
 const bcrypt = require('bcryptjs');
 const pool = require('../../config/database');
 const jwt = require('jsonwebtoken');
 
 module.exports = {
     createUser: (req, res) => {
-        try {
-            const { firstName, lastName, userName, email, password } = req.body;
+        const { firstName, lastName, userName, email, password } = req.body;
 
-            //validation 
-            if (!firstName || !lastName || !userName || !email || !password)
-                return res.status(400).json({ msg: 'Not all fields have been provided!' })
-            if (password.length < 8)
-                return res
-                    .status(400)
-                    .json({ msg: 'Password must be at least 8 characters!' })
-            pool.query('SELECT * FROM registration WHERE user_email = ?',
-                [email],
-                (err, results) => {
-                    if (err) {
-                        return res
-                            .status(err)
-                            .json({ msg: "database connection err" })
-                    }
-                    if (results.length > 0) {
-                        return res
-                            .status(400)
-                            .json({ msg: "An account with this email already exists!" });
-                    } else {
-                        //password encryption
-                        const salt = bcrypt.genSaltSync();
-                        req.body.password = bcrypt.hashSync(password, salt);
-                        console.log(req.body.password);
+        //validation 
+        if (!firstName || !lastName || !userName || !email || !password)
+            return res.status(400).json({ msg: 'Not all fields have been provided!' })
+        if (password.length < 8)
+            return res
+                .status(400)
+                .json({ msg: 'Password must be at least 8 characters!' })
+        pool.query('SELECT * FROM registration WHERE user_email = ?',
+            [email],
+            (err, results) => {
+                if (err) {
+                    return res
+                        .status(err)
+                        .json({ msg: "database connection err" })
+                }
+                if (results.length > 0) {
+                    return res
+                        .status(400)
+                        .json({ msg: "An account with this email already exists!" });
+                } else {
+                    //password encryption
+                    const salt = bcrypt.genSaltSync();
+                    req.body.password = bcrypt.hashSync(password, salt);
+                    console.log(req.body.password);
 
-                        //sending data to register
-                        create(req.body, (err, results) => {
-                            if (err) {
-                                console.log(err);
-                                return res
-                                    .status(500)
-                                    .json({ msg: "database connection err" });
-                            }
-                            return res.status(200).json({
-                                msg: "New user added successfully",
-                                data: results
-                            })
+                    //sending data to register
+                    register(req.body, (err, results) => {
+                        if (err) {
+                            console.log(err);
+                            return res
+                                .status(500)
+                                .json({ msg: "database connection err" });
+                        }
+                        return res.status(200).json({
+                            msg: "New user added successfully",
+                            data: results
                         })
-                    }
-                })
-        } catch (err) {
-            res.status(500).json({
-                err: err.message
-            });
-            console.log(err);
-        }
+                    })
+                }
+            })
     },
     getUsers: (req, res) => {
         getAllUsers((err, results) => {
