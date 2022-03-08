@@ -30,7 +30,6 @@ module.exports = {
                     //password encryption
                     const salt = bcrypt.genSaltSync();
                     req.body.password = bcrypt.hashSync(password, salt);
-                    console.log(req.body.password);
 
                     //sending data to register
                     register(req.body, (err, results) => {
@@ -60,8 +59,9 @@ module.exports = {
         })
     },
     getUserById: (req, res) => {
-        const id = req.params.id;
-        getUserById(id, (err, results) => {
+        // const id = req.params.id;
+        // console.log("id===>",id,"user===>",req.id);
+        getUserById(req.id, (err, results) => {
             if (err) {
                 console.log(err);
                 return res
