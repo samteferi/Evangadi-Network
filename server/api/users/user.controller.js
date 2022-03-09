@@ -1,4 +1,4 @@
-const { register, getAllUsers, getUserById, getUserByEmail } = require('./user.service');
+const { register, getAllUsers, userById, getUserByEmail } = require('./user.service');
 const bcrypt = require('bcryptjs');
 const pool = require('../../config/database');
 const jwt = require('jsonwebtoken');
@@ -61,7 +61,7 @@ module.exports = {
     getUserById: (req, res) => {
         // const id = req.params.id;
         // console.log("id===>",id,"user===>",req.id);
-        getUserById(req.id, (err, results) => {
+        userById(req.id, (err, results) => {
             if (err) {
                 console.log(err);
                 return res

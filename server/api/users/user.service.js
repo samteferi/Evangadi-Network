@@ -27,7 +27,7 @@ module.exports = {
             return callback(null, result);
          })
     },
-    getUserById: (id, callback) => {
+    userById: (id, callback) => {
         pool.query(`SELECT user_id,first_name,last_name,user_name,user_email FROM registration WHERE user_id = ?`, [id], (err, result) => {
             if (err) {
               return callback(err);
