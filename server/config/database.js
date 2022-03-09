@@ -12,7 +12,6 @@ let registration = `CREATE TABLE if not exists registration(
     user_id int auto_increment,
     first_name varchar(255) not null,
     last_name varchar(255) not null,
-    user_name varchar(255) not null,
     user_email varchar(255) not null,
     user_password varchar(255) not null,
     PRIMARY KEY (user_id)
