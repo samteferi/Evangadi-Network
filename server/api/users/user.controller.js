@@ -7,6 +7,8 @@ module.exports = {
     createUser: (req, res) => {
         const { firstName, lastName, email, password } = req.body;
 
+        // firstname = cleaner(data.firstName); <?php echo ?> 
+
         //validation 
         if (!firstName || !lastName || !email || !password)
             return res.status(400).json({ msg: 'Not all fields have been provided!' })
