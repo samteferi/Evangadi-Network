@@ -51,7 +51,7 @@ pool.query(registration, (err, results) => {
 })
 pool.query(profile, (err, results) => {
     if (err) throw err;
-    console.log('registration table created');
+    console.log('profile table created');
 })
 pool.query(question, (err, results2) => {
     if (err) throw err;

@@ -1,16 +1,16 @@
-const { register, getAllUsers, userById, getUserByEmail } = require('./user.service');
+const { register, getAllUsers, userById, getUserByEmail, profile } = require('./user.service');
 const bcrypt = require('bcryptjs');
 const pool = require('../../config/database');
 const jwt = require('jsonwebtoken');
 
 module.exports = {
     createUser: (req, res) => {
-        const { firstName, lastName, email, password } = req.body;
+        const { userName, firstName, lastName, email, password } = req.body;
 
         // firstname = cleaner(data.firstName); <?php echo ?> 
 
         //validation 
-        if (!firstName || !lastName || !email || !password)
+        if (!userName || !firstName || !lastName || !email || !password)
             return res.status(400).json({ msg: 'Not all fields have been provided!' })
         if (password.length < 8)
             return res
@@ -41,11 +41,31 @@ module.exports = {
                                 .status(500)
                                 .json({ msg: "database connection err" });
                         }
-                        return res.status(200).json({
-                            msg: "New user added successfully",
-                            data: results
-                        })
                     })
+                    pool.query('SELECT * FROM registration WHERE user_email = ?',
+                        [email],
+                        (err, results) => {
+                            if (err) {
+                                return res
+                                    .status(err)
+                                    .json({ msg: "database connection err" })
+                            }
+                            req.body.userId = results[0].user_id;
+                            console.log(req.body);
+                            profile(req.body, (err, results) => {
+                                if (err) {
+                                    console.log(err);
+                                    return res
+                                        .status(500)
+                                        .json({ msg: "database connection err" });
+                                }
+                                return res.status(200).json({
+                                    msg: "New user added successfully",
+                                    data: results
+                                })
+                            })
+                        }
+                    );
                 }
             })
     },

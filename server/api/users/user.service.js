@@ -3,12 +3,26 @@ const pool = require('../../config/database');
 module.exports = {
     //data comes form the user controller
     register: (data, callback) => {
-        pool.query(`INSERT INTO registration(first_name,last_name,user_email,user_password)VALUES(?,?,?,?)`,
+        pool.query(`INSERT INTO registration(user_name,user_email,user_password)VALUES(?,?,?)`,
             [
-                data.firstName,
-                data.lastName,
+                data.userName,
                 data.email,
                 data.password
+            ],
+            (err, result) => {
+                if (err) {
+                    return callback(err);
+                }
+                return callback(null, result);
+            }
+        );
+    },
+    profile: (data, callback) => {
+        pool.query(`INSERT INTO profile(user_id,first_name,last_name)VALUES(?,?,?)`, 
+            [
+                data.userId,
+                data.firstName,
+                data.lastName
             ],
             (err, result) => {
                 if (err) {
