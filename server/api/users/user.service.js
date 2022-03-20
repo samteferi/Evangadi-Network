@@ -18,7 +18,7 @@ module.exports = {
         );
     },
     profile: (data, callback) => {
-        pool.query(`INSERT INTO profile(user_id,first_name,last_name)VALUES(?,?,?)`, 
+        pool.query(`INSERT INTO profile(user_id,first_name,last_name)VALUES(?,?,?)`,
             [
                 data.userId,
                 data.firstName,
@@ -33,17 +33,17 @@ module.exports = {
         );
     },
     getAllUsers: (callback) => {
-        pool.query(`SELECT user_id,first_name,last_name,user_name,user_email FROM registration`, [], (err, result) => {
+        pool.query(`SELECT user_id,user_name,user_email FROM registration`, [], (err, result) => {
             if (err) {
-                 return callback(err);
+                return callback(err);
             }
             return callback(null, result);
-         })
+        })
     },
     userById: (id, callback) => {
-        pool.query(`SELECT user_id,first_name,last_name,user_email FROM registration WHERE user_id = ?`, [id], (err, result) => {
+        pool.query(`SELECT registration.user_id,user_name,user_email,first_name,last_name FROM registration LEFT JOIN profile ON registration.user_id = profile.user_id WHERE registration.user_id = ?`, [id], (err, result) => {
             if (err) {
-              return callback(err);
+                return callback(err);
             }
             return callback(null, result[0]);
         })
