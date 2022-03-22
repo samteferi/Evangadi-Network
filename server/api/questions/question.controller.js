@@ -1,14 +1,21 @@
+const bcrypt = require('bcryptjs');
+const { v4: uuidv4 } = require('uuid');
 const { questionById, getAllQuestions, addQuestion } = require('./question.service');
 
 module.exports = {
     createQuestion: (req, res) => {
         //id is user id
         const { question, id } = req.body;
+        const salt = bcrypt.genSaltSync();
+        req.body.postId = bcrypt.hashSync(uuidv4(), salt);
+        console.log(req.body.postId);
 
         //validation
         if (!question || !id) {
             return res.status(400).json({ msg: 'Not all fields have been provided!' })
         }
+
+
 
         //sending data to question table
         addQuestion(req.body, (err, results) => {

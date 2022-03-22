@@ -2,10 +2,13 @@ const pool = require('../../config/database');
 
 module.exports = {
     addQuestion: (data, callback) => {
-        pool.query(`INSERT INTO question(question,question_code_block,user_id)VALUES(?,?,?)`,
+        pool.query(`INSERT INTO question(question,question_description,question_code_block,tags,post_id,user_id)VALUES(?,?,?,?,?,?)`,
             [
                 data.question,
+                data.questionDescription,
                 data.questionCodeBlock,
+                data.tags,
+                data.postId,
                 data.id
             ], (err, result) => {
                 if (err) {
@@ -16,7 +19,7 @@ module.exports = {
         );
     },
     getAllQuestions: (callback) => {
-        pool.query(`SELECT * FROM question`, [], (err, result) => {
+        pool.query(`SELECT question,question_description,question_code_block,tags,post_id FROM question`, [], (err, result) => {
             if (err) {
                 return callback(err);
             }
@@ -24,7 +27,8 @@ module.exports = {
         })
     },
     questionById: (id, callback) => {
-        pool.query(`SELECT * FROM question WHERE question_id = ?`, [id], (err, result) => {
+        //id is postId
+        pool.query(`SELECT question,question_description,question_code_block,tags,post_id FROM question WHERE post_id = ?`, [id], (err, result) => {
             if (err) {
                 return callback(err);
             }
