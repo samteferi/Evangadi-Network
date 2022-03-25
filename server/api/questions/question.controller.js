@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs');
+const CryptoJS = require('crypto-js');
+require("dotenv").config();
 const { v4: uuidv4 } = require('uuid');
 const { questionById, getAllQuestions, addQuestion } = require('./question.service');
 
@@ -6,8 +8,7 @@ module.exports = {
     createQuestion: (req, res) => {
         //id is user id
         const { question, id } = req.body;
-        const salt = bcrypt.genSaltSync();
-        req.body.postId = bcrypt.hashSync(uuidv4(), salt);
+        req.body.postId = CryptoJS.AES.encrypt('15', process.env.JWT_SECRET).toString();
         console.log(req.body.postId);
 
         //validation
@@ -35,11 +36,19 @@ module.exports = {
                 console.log(err);
                 return res.status(500).json({ msg: "database connection error" })
             }
+            let post_id = results.map(item => item.post_id = item.post_id + 2);
+            console.log(post_id);
+            // results=results.map((item,i) =>object.assign(item,post_id[i]));
+            console.log(results);
             return res.status(200).json({ data: results });
         })
     },
     getQuestionById: (req, res) => {
-        const id = req.params.id;
+        console.log(req.params)
+        let id = req.params.id;
+        let bytes = CryptoJS.AES.decrypt(id, process.env.JWT_SECRET);
+        id = bytes.toString(CryptoJS.enc.Utf8);
+        console.log(id)
         questionById(id, (err, results) => {
             if (err) {
                 console.log(err);
