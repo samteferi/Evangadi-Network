@@ -28,7 +28,7 @@ module.exports = {
     },
     questionById: (id, callback) => {
         //id is postId
-        pool.query(`SELECT question,question_description,question_code_block,tags,post_id FROM question WHERE post_id = ?`, [id], (err, result) => {
+        pool.query(`SELECT * FROM question WHERE post_id = ?`, [id], (err, result) => {
             if (err) {
                 return callback(err);
             }
