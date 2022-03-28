@@ -6,12 +6,11 @@ const Home = ({logout}) => {
     const [userData, setUserData] = useContext(UserContext);
     const navigate = useNavigate();
     useEffect(() => {
-        if (!userData)
-            navigate("/login");
-    }, []);
+        if (!userData.user)navigate("/login");
+    }, [userData.user, navigate]);
     return (
         <div>
-            <h1>Home</h1>
+            <h1>WelCome {userData.user?.display_name}</h1>
             <button onClick={logout}>Log out</button>
         </div>
     )

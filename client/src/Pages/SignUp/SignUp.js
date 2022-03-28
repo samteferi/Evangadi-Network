@@ -47,6 +47,12 @@ const SignUp = () => {
                     name="lastName"
                     onChange={handleChange}
                 /><br />
+                <label>User Name: </label>
+                <input
+                    type="text"
+                    name="userName"
+                    onChange={handleChange}
+                /><br />
                 <label>Email: </label>
                 <input
                     type="text"
