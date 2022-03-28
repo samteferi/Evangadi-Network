@@ -17,6 +17,7 @@ module.exports = {
         );
     },
     answerByQuestionId: (id, callback) => {
+        //id is questionId
         pool.query(`SELECT * From answer WHERE question_id = ?`, [id], (err, result) => {
             if (err) {
                 return callback(err);
