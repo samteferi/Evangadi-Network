@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
+import './Login.css'
 
 const Login = () => {
   const [userData, setUserData] = useContext(UserContext);
@@ -38,21 +39,19 @@ const Login = () => {
   }, [userData.user, navigate]);
 
   return (
-    <div>
+    <div className="main">
+       <p className="p1">Login to your account</p>
+       <p className="p2">
+   Don't have an account?<Link to='' className="a1">Create a new account</Link>
+  </p>
       <form onSubmit={handleSubmit}>
-        <label>Email: </label>
-        <input type="text" name="email" onChange={handleChange} />
-        <br />
-        <label>Password: </label>
-        <input type="password" name="password" onChange={handleChange} />
-        <br />
-        <button>submit</button>
+        <input className="in1" type="email" name="email" onChange={handleChange} placeholder="Your Email" />
+        <input className="in1"type="password" name="password" onChange={handleChange} placeholder="Your Password" />
+        <button className="btn1">submit</button>
       </form>
-      <div>
-        <Link to='/signup'>
-              Already have an account?
+        <Link to='/signup' className="a3">
+            Create an account?
         </Link>
-      </div>
     </div>
   );
 };
