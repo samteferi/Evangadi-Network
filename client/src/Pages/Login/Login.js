@@ -27,7 +27,8 @@ const Login = () => {
       localStorage.setItem('auth-token', loginRes.data.token);
       navigate('/');
     } catch (err) {
-      console.log('problem', err);
+      console.log('problem', err.response.data.msg);
+      alert(err.response.data.msg);
     }
   }
 

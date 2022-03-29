@@ -16,6 +16,7 @@ module.exports = {
                 return callback(null, result);
             }
         );
+        //query select user using email to get user_id
     },
     profile: (data, callback) => {
         pool.query(`INSERT INTO profile(user_id,first_name,last_name)VALUES(?,?,?)`,

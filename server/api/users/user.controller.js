@@ -1,5 +1,7 @@
 const { register, getAllUsers, userById, getUserByEmail, profile } = require('./user.service');
+//Importing bcryptJs module to use password encryption
 const bcrypt = require('bcryptjs');
+//Importing database structure 
 const pool = require('../../config/database');
 const jwt = require('jsonwebtoken');
 
