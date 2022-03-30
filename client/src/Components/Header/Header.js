@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header1.css";
+import "./Header.css";
 import logo from "../Images/evangadi-logo-home.png";
 import { Link } from "react-router-dom";
 function Header1() {

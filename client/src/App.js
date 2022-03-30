@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { UserContext } from './context/UserContext';
-import Header1 from './Header/Header1';
+import Header1 from './Components/Header/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
