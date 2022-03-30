@@ -19,7 +19,7 @@ module.exports = {
         );
     },
     getAllQuestions: (callback) => {
-        pool.query(`SELECT question,question_description,question_code_block,tags,post_id FROM question`, [], (err, result) => {
+        pool.query(`SELECT question,question_description,question_code_block,tags,post_id FROM question ORDER BY question_id DESC`, [], (err, result) => {
             if (err) {
                 return callback(err);
             }
