@@ -43,7 +43,6 @@ function App() {
     <Router>
       <div>
        <Header1/>
-       <SignUp/>
         <Routes>
           <Route path="/signup" element={<SignUp /> } />
           <Route path="/login" element={<Login />} />
