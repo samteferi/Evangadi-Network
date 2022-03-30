@@ -34,7 +34,7 @@ img{
 @media(min-width:570px){
     .header{
         width: 1423px;
-        height: 82px;
+        height: 10vh;
         background-color: #FFFFFF;
         color: #62626F;
         margin: 0 0 20px;
