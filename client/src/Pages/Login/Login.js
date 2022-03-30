@@ -42,7 +42,7 @@ const Login = () => {
     <div className="main">
        <p className="p1">Login to your account</p>
        <p className="p2">
-   Don't have an account?<Link to='' className="a1">Create a new account</Link>
+   Don't have an account?<Link to='/signup' className="a1">Create a new account</Link>
   </p>
       <form onSubmit={handleSubmit}>
         <input className="in1" type="email" name="email" onChange={handleChange} placeholder="Your Email" />
