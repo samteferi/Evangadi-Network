@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserContext } from "../../context/UserContext";
 
@@ -67,6 +67,7 @@ const SignUp = () => {
                 /><br />
                 <button>submit</button>
             </form>
+            <Link to="/login">Already have an account?</Link>
         </div>
     );
 };

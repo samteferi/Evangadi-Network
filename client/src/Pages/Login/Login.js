@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
           email: form.email,
           password: form.password
         });
-        console.log(loginRes)
+      console.log(loginRes)
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user
@@ -37,21 +37,25 @@ const Login = () => {
   }, [userData.user, navigate]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Email: </label>
-      <input
-        type="text"
-        name="email"
-        onChange={handleChange}
-      /><br />
-      <label>Password: </label>
-      <input
-        type="password"
-        name="password"
-        onChange={handleChange}
-      /><br />
-      <button>submit</button>
-    </form>
+    <div>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Email: </label>
+        <input
+          type="text"
+          name="email"
+          onChange={handleChange}
+        /><br />
+        <label>Password: </label>
+        <input
+          type="password"
+          name="password"
+          onChange={handleChange}
+        /><br />
+        <button>submit</button>
+      </form>
+      <Link to="/signup">Create a new account</Link>
+    </div>
   )
 }
 
