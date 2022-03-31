@@ -42,8 +42,7 @@ function App() {
   return (
     <Router>
       <div>
-       <Header1/>
-       <SignUp/>
+        <Header1 logout={logout}/>
         <Routes>
           <Route path="/signup" element={<SignUp /> } />
           <Route path="/login" element={<Login />} />
