@@ -9,7 +9,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import Footer from './Components/Footer/Footer';
 import Questions from './Pages/QuesitonsPage/Questions';
-import QuestionsHeader from './Pages/Top&Ask_Quesions/QuestionsHeader'
+import QuestionsHeader from './Components/QuestionHeader/QuestionsHeader'
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -43,22 +43,22 @@ function App() {
    checkLoggedIn();
   }, []);
   return (
-    // <Router>
-    //      <Header1 logout={logout}/>
-    //     <Routes>
-    //       <Route path="/signup" element={<SignUp /> } />
-    //       <Route path="/login" element={<Login />} />
-    //       <Route path="/" element={<Home logout={logout}/>} />
-    //     </Routes>
-    //     <Footer/>
+    <Router>
+         <Header1 logout={logout}/>
+        <Routes>
+          <Route path="/signup" element={<SignUp /> } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home logout={logout}/>} />
+        </Routes>
+        <Footer/>
    
-    // </Router>
-    <div>
-       <QuestionsHeader/>
-       <Questions/>
-       <Questions/>
-    </div>
-  );
+    </Router>
+    // <div>
+    //    <QuestionsHeader/>
+    //    <Questions/>
+    //    <Questions/>
+    // </div>
+  )
 }
 
 export default App;

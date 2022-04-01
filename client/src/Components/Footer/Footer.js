@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="row">
-        <h3 className="title"> Useful Link</h3>
+        <h3 className="titlee"> Useful Link</h3>
           <div className="Useful-Link ">
             <a href="https://www.evangadi.com/explained/">How it works</a>
 
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className="row">
           <div className="Contact-Info">
-            <h3 className="title"> Contact Info</h3>
+            <h3 className="titlee"> Contact Info</h3>
             <p>Evangadi Networks</p>
             <p>support@evangadi.com</p>
             <p>+1-202-386-2702</p>
