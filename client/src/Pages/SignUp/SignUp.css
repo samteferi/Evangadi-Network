@@ -74,7 +74,7 @@ form {
 	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 }
 
-.showHidee {
+.showHide {
 	display: flex;
 	justify-content: flex-end;
 	margin-top: -52px;
@@ -120,7 +120,7 @@ form {
 	.a22 {
 		margin-right: 0px;
 	}
-	.showHidee {
+	.showHide {
         margin-right: 40px;
         margin-left: 460px;
         opacity: 0.65;

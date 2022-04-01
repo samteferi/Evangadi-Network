@@ -106,7 +106,7 @@ const SignUp = () => {
             type={type}
             placeholder="Password"
           />
-        <span onClick={HandleIconChange} className="showHidee">
+        <span onClick={HandleIconChange} className="showHide">
            <Icon icon={icon} size={20}/>
         </span>
         </form>
