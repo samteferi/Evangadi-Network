@@ -8,6 +8,8 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import Footer from './Components/Footer/Footer';
+import Questions from './Pages/QuesitonsPage/Questions';
+import QuestionsHeader from './Pages/Top&Ask_Quesions/QuestionsHeader'
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -41,16 +43,21 @@ function App() {
    checkLoggedIn();
   }, []);
   return (
-    <Router>
-         <Header1 logout={logout}/>
-        <Routes>
-          <Route path="/signup" element={<SignUp /> } />
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home logout={logout}/>} />
-        </Routes>
-        <Footer/>
+    // <Router>
+    //      <Header1 logout={logout}/>
+    //     <Routes>
+    //       <Route path="/signup" element={<SignUp /> } />
+    //       <Route path="/login" element={<Login />} />
+    //       <Route path="/" element={<Home logout={logout}/>} />
+    //     </Routes>
+    //     <Footer/>
    
-    </Router>
+    // </Router>
+    <div>
+       <QuestionsHeader/>
+       <Questions/>
+       <Questions/>
+    </div>
   );
 }
 
