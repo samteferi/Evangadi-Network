@@ -130,9 +130,7 @@ const SignUp = () => {
           <p className="forTitle">About</p>
           <h1>Evangadi Networks Q&A</h1>
           <p className="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>
-          <br />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>
-          <br />
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolor odio harum sunt, quaerat, molestias fuga expedita ad excepturi officiis aliquam aut nemo ratione culpa id laborum ipsum porro tempore?</p>
           <button className="btn1">HOW IT WORKS</button>
     </div>
