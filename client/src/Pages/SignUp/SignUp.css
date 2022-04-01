@@ -62,7 +62,7 @@ form{
 .a33{
    color:#FF8500 !important;
    margin: 20px;
-   padding-left: 50px;
+   padding-left:90px;
    font-size: 20px;
 }
 
@@ -81,9 +81,9 @@ form{
     font-weight: bold;
     position: absolute;
     display: block;
-    top:460px !important;
+    top:510px !important;
     height: 36px;
-    right:5px !important;
+    right:1px !important;
     color: black;
     opacity:.65;
     background-color: rgba(255,255,255,0);
@@ -135,7 +135,7 @@ form{
         font-weight: bold;
         position: absolute;
         display: block;
-        top:425px !important;
+        top:450px !important;
         height: 36=px;
         right: 780px !important;
         color: black;

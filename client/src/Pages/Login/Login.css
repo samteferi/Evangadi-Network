@@ -18,7 +18,7 @@ form {
   font-weight: bold;
   position: absolute;
   display: block;
-  top: 260px !important;
+  top: 285px !important;
   height: 36px;
   right: 30px !important;
   color: black;
@@ -75,7 +75,6 @@ form {
   margin: 20px;
   padding-left: 100px;
 }
-
 .totalContainer{
     display: flex;
 }
@@ -84,7 +83,6 @@ form {
     margin-left: 0PX;
     padding-right: 140px;
 }
-
 .forTitle{
     font-size: 14px;
     font-family: Lato,sans-serif;
@@ -123,13 +121,11 @@ p{
 h1{
   margin-bottom: 20px;
 }
-
 @media (min-width: 570px) {
   .main {
     margin-left: 100px;
     width: 500px;
   }
-
   .a3 {
     color: #ff8500 !important;
     margin: 82px;
@@ -140,7 +136,7 @@ h1{
     font-weight: bold;
     position: absolute;
     display: block;
-    top: 270px !important;
+    top: 315px !important;
     height: 36px;
     right: 800px !important;
     color: black;
@@ -156,5 +152,4 @@ h1{
   .btn1{
     margin-top: 50px;
   }
-
 }
