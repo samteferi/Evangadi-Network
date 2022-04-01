@@ -106,10 +106,10 @@ const SignUp = () => {
             type={type}
             placeholder="Password"
           />
-        </form>
         <span onClick={HandleIconChange} className="showHidee">
            <Icon icon={icon} size={20}/>
         </span>
+        </form>
         <p className="p33">
           I agree to the
           <Link to="" className="a22">
