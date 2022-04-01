@@ -7,6 +7,7 @@ import Header1 from './Components/Header/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
+import Footer from './Components/Footer/Footer';
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -41,14 +42,14 @@ function App() {
   }, []);
   return (
     <Router>
-      <div>
-        <Header1 logout={logout}/>
+         <Header1 logout={logout}/>
         <Routes>
           <Route path="/signup" element={<SignUp /> } />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home logout={logout}/>} />
         </Routes>
-      </div>
+        <Footer/>
+   
     </Router>
   );
 }

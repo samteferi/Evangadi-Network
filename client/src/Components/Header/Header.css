@@ -11,6 +11,8 @@
     display: flex;
     align-items: center;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    opacity: initial;
+    background-color: #FFFFFF;
 }
 img{
     width: 200px;

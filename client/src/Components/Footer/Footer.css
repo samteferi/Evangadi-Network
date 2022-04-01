@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wrapper {
+  background-color: rgb(59, 69, 90);
+}
+.row {
+  width: 28%;
+  margin: 40px 0 40px 0;
+  line-height: 150%;
+}
+.row-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+h6 {
+  color: rgb(177, 173, 173);
+  font-weight: 400;
+  font-size: 12px;
+}
+.logo-icon-wrapper {
+  padding-left: 80px;
+}
+a {
+  color: rgb(177, 173, 173);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Useful-Link {
+  padding-left: 30px;
+}
+.Icon {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}

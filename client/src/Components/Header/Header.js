@@ -1,11 +1,9 @@
-
-import React from "react";
 import "./Header.css";
 import React, { useContext } from "react";
-import "./Header1.css";
-import logo from "../Images/evangadi-logo-home.png";
+import "./Header.css";
+import logo from "../../Images/evangadi-logo-home.png";
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 function Header1({ logout }) {
   const [userData, setUserData] = useContext(UserContext);
   const navigate = useNavigate();
