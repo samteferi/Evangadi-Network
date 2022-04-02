@@ -55,8 +55,8 @@ const SignUp = () => {
    }
  };
   return (
-    <div className="mainn">
-      <div className="container ">
+    <div className="container  d-md-flex mx-auto my-5">
+      <div className="containe mainn">
         <p className="p11">Join the network</p>
         <p className="p22 lorem">
           Already have an account?
@@ -66,14 +66,13 @@ const SignUp = () => {
         </p>
         <form onSubmit={handleSubmit}>
           <input
-            className="in11 in11i"
+            className="in11 mr-1 in11i "
             name="email"
             onChange={handleChange}
             type="email"
             placeholder="Email"
           />
-
-          <div className="FLname">
+          <div className="FLname d-flex">
             <input
               className="in11 in11F"
               name="firstName"
@@ -110,7 +109,7 @@ const SignUp = () => {
            <Icon icon={icon} size={20}/>
         </span>
         </form>
-        <p className="p33">
+        <p className="mt-md-5 mt-sm-5  texttag">
           I agree to the
           <Link to="" className="a22">
             privacy policy
@@ -126,7 +125,7 @@ const SignUp = () => {
           Already have an account?
         </Link>
       </div>
-      <div className="SignupNote">
+      <div className="SignupNote d-none d-md-block">
           <p className="forTitle">About</p>
           <h1>Evangadi Networks Q&A</h1>
           <p className="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>

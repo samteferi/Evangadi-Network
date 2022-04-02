@@ -10,17 +10,13 @@
 form {
 	text-align: center;
 }
-.sideNote {
-	display: none;
-}
-
 .a1 {
 	color: #ff8500;
 	padding-left: 3px;
 	font-size: 15px;
 }
 .main {
-	background-color: #fff;
+	background-color:whitesmoke;
 	padding: 15px;
 	margin: auto;
 	border-radius: 8px;
@@ -61,13 +57,9 @@ form {
 	margin: 20px;
 	padding-left: 100px;
 }
-.totalContainer {
-	display: flex;
-}
-.sideNote {
+
+.sideNote2 {
 	width: 600px;
-	margin-left: 0px;
-	padding-right: 140px;
 }
 .forTitle {
 	font-size: 14px;
@@ -106,19 +98,20 @@ p {
 h1 {
 	margin-bottom: 20px;
 }
+.showHide2 {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -52px;
+	margin-right: 25px;
+    opacity: 0.65;
+    cursor: pointer;
+}
 @media (min-width: 570px) {
-	.main {
-		margin-left: 100px;
-		width: 500px;
-	}
+
 	.a3 {
 		color: #ff8500 !important;
 		margin: 82px;
-		padding-left: 100px;
-	}
-
-	.sideNote {
-		display: block;
+		padding-left: 50px;
 	}
 	.btn1 {
 		margin-top: 50px;

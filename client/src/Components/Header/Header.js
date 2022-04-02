@@ -17,21 +17,23 @@ function Header1({ logout }) {
   }
   return (
     <div className="header">
-      <div className="header__container">
-        <Link to='/' className="header__image">
-          <img src={logo} alt="Evangadi logo" />
+      <div className="innerContainer  d-flex  text-center  justify-content-around ">
+        <Link to='/' className="header__image text-center">
+          <img src={logo} alt="Evangadi logo"/>
         </Link>
-        <div className="rightSide">
-          <a className="" href="">Home</a>
-          <a className="" href="">How it Works</a>
-          <div className="rightSide__button">
-            <button className="btn" onClick={goToSignIn}>{userData.user? "LogOut" : "SIGN IN"}</button>
-          </div>
-        </div>
-        <button className='ic'>
+        <button className='ic d-sm-block d-md-none'>
                ☰
         </button>
+        <div className="d-flex  innerContainer2 text-center pt-3 justify-content-between">
+          <a className="pt-2" href="">Home</a>
+          <a className="pt-2" href="">How it Works</a>
+          <div className="rightSide__button">
+            <button className="btn_header" onClick={goToSignIn}>{userData.user? "LogOut" : "SIGN IN"}</button>
+          </div>
+        </div>
+        
       </div>
+     
     </div>
   );
 }

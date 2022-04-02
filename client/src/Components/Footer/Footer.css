@@ -1,6 +1,7 @@
 .footer-wrapper{
   background-color: #3B455A;
   padding-left: 30px;
+ 
 }
 .Useful-link{
   border: 1px solid #3B455A;
@@ -42,21 +43,8 @@ color: rgba(213, 213, 213, 0.6);
 .Contact-Info{
   padding-bottom: 50px;
 }
-@media(min-width:570px){
-  .footer-wrapper{
-    background-color: #3B455A;
-    padding-left: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    height: 200px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    padding-bottom: 40px;
-  }
+ 
 
 
 
 
-
-
-}

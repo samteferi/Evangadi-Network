@@ -56,7 +56,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="totalContainer">
+    <div className="container my-5 d-md-flex justify-content-between">
 
     <div className="main">
        <p className="p1">Login to your account</p>
@@ -66,7 +66,7 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <input className="in1" type="email" name="email" onChange={handleChange} placeholder="Your Email" />
         <input className="in1"type={type} name="password" onChange={handleChange} placeholder="Your Password" />
-        <span onClick={HandleIconChange} className="showHide">
+        <span onClick={HandleIconChange} className="showHide2">
           <Icon icon={icon} size={20}/>
         </span>
         <button className="btn1">submit</button>
@@ -75,7 +75,7 @@ const Login = () => {
             Create an account?
         </Link>
     </div>
-    <div className="sideNote">
+    <div className="sideNote2 d-none d-md-block">
       <p className="forTitle">About</p>
       <h1>Evangadi Networks Q&A</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>

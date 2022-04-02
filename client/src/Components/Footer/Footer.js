@@ -8,7 +8,7 @@ import logo from "../../Images/logo1.png";
 
 export default function Footer() {
   return (
-    <footer className="footer-wrapper">
+    <footer className="footer-wrapper d-md-flex justify-content-around">
         <div className="logo-icon-wrapper">
           <div className="logo">
             <img src={logo} />

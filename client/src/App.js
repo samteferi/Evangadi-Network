@@ -29,16 +29,13 @@ function App() {
       })
     }
   }
-
   const logout = () => {
     setUserData({
       token: undefined,
       user: undefined,
     });
-
     localStorage.setItem('auth-token', '');
   };
-
   useEffect(() => {
    checkLoggedIn();
   }, []);
@@ -51,14 +48,8 @@ function App() {
           <Route path="/" element={<Home logout={logout}/>} />
         </Routes>
         <Footer/>
-   
     </Router>
-    // <div>
-    //    <QuestionsHeader/>
-    //    <Questions/>
-    //    <Questions/>
-    // </div>
+ 
   )
 }
-
 export default App;

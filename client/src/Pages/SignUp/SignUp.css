@@ -5,12 +5,15 @@
 	font-family: "Lato", sans-serif;
 	color: #2d385e;
 }
+.texttag{
+	padding-left: 50px;
+	margin-top: 15px;
+}
 .p22 {
 	font-size: 15px;
 	font-family: "Lato", sans-serif;
 	text-align: center;
 	color: #62626f;
-	margin-bottom: 40px;
 }
 .in11 {
 	width: 100%;
@@ -20,7 +23,9 @@
 	border: silver 1px solid;
 	padding-left: 10px;
 	font-size: 17px;
+	margin-right: 20px;
 }
+
 form {
 	text-align: center;
 }
@@ -56,7 +61,7 @@ form {
 	background-color: #ff8500 !important;
 }
 .btnSign:active {
-	border: 3px solid #516cf0;
+	border: 3px solid #516cf0 ;
 }
 .a33 {
 	color: #ff8500 !important;
@@ -64,16 +69,11 @@ form {
 	padding-left: 90px;
 	font-size: 20px;
 }
-
 .mainn {
-	background-color: #fff;
-	padding: 15px;
-	/* margin:  auto; */
-	border-radius: 8px;
-	padding-bottom: 120px;
+	background-color:whitesmoke;
+    border-radius: 15px;
 	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
-}
-
+ } 
 .showHide {
 	display: flex;
 	justify-content: flex-end;
@@ -82,56 +82,27 @@ form {
     opacity: 0.65;
     cursor: pointer;
 }
-.SignupNote {
-	display: none;
-}
 .p33 {
 	margin-bottom: 20px;
 }
 .a33:hover {
 	text-decoration: underline;
 }
-
-@media (min-width: 570px) {
-	.mainn {
-		margin-left: 100px;
-		display: flex;
-	}
-	.container {
-		width: 500px;
-	}
-	.FLname {
-		display: flex;
-	}
-	.in11 {
-		margin-right: 20px;
-	}
-	.in11L,
-	.in11F {
-		width: 500px;
-		margin-right: 10px;
-	}
-	.in11i {
-		width: 475px;
-	}
-	.a33 {
-		margin-left: 60px;
-	}
-	.a22 {
-		margin-right: 0px;
-	}
-	.showHide {
-        margin-right: 40px;
-        margin-left: 460px;
-        opacity: 0.65;
-	}
-
-	.SignupNote {
-		display: block;
-		margin-left: 100px;
-		width: 600px;
-	}
-	.lorem {
-		margin-top: 20px;
-	}
+.containe{
+	width: 500px;
+	margin: auto;
 }
+.SignupNote {
+	margin-left: 100px;
+	width: 600px;
+}
+.in11i {
+	width: 475px;
+}
+.a22 {
+	margin-right: 0px;
+}
+
+
+
+
