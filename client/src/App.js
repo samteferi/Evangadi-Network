@@ -8,8 +8,10 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import Footer from './Components/Footer/Footer';
-import Questions from './Pages/QuesitonsPage/Questions';
-import QuestionsHeader from './Components/QuestionHeader/QuestionsHeader'
+import Questions from './Components/QuesitonsP/Questions';
+import Que from '../src/Components/Question/Que'
+import DashBoard from './Pages/Dashboard/DashBoard'
+import Ans from './Components/Answer/Ans'
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -47,8 +49,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home logout={logout}/>} />
         </Routes>
+        <Ans/>
         <Footer/>
     </Router>
+   
+
  
   )
 }

@@ -1,0 +1,52 @@
+.questionOnBoarding {
+    background-color: #fafafa;
+    padding-bottom: 60px;
+}
+.questionOnBoardingWrapper {
+    padding-top: 40px;
+}
+.left-align {
+    text-align: left;
+}
+.onBoardTitleQnWrapper .onBoardWrapper{
+ margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+.onBoardWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+}
+.onBoardTitleWrapper .onBoardTitle {
+    color: #1d1c1d;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2143;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 10px;
+}
+.onBoardWrapper .onBoardAsklink {
+    line-height: 25px;
+    text-transform: uppercase;
+    padding: 8px 15px !important;
+    transition: box-shadow 0.3s ease-in-out, padding 0.2s ease-in;
+    border-radius: 6px;
+    background: #516cf0;
+   color: #fff !important;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+}
+.onBoardWrapper .onBoardAsklink a{
+    text-decoration: none;
+    color: #fff !important;
+     margin-right: 0;
+
+}
+.onBoardWrapper .onBoardAsklink:hover{
+    background-color: #fe8402;
+    border-color: #fe8402;
+}
+    

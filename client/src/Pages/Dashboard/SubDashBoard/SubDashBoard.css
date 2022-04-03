@@ -1,0 +1,124 @@
+.SubDashBoard {
+    /* background: silver; */
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    position: relative;
+    margin-bottom:36px;
+}
+/* .SubDashBoard  .ChevronRight {
+    float: right;
+} */
+
+.onboardAnswerlink {
+    min-width: 100px; 
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: "Lato", sans-serif;
+}
+
+.onBoardQnDescription {
+    flex-grow: 1;
+    margin-bottom: 0.7rem;
+    /* margin-left: 0.7rem; */
+    line-height: 1.46668;
+    padding-right: 15px;
+}
+.ChevronRight {
+    line-height: 25px;
+    padding: 5px 0px !important;
+    transition: box-shadow 0.3s ease-in-out, padding 0.2s ease-in;
+    border-radius: 6px;
+    background: #516cf0;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+}
+.ChevronRight a{
+    text-decoration: none;
+    color: #fff !important;
+    margin-right: 0;
+
+}
+.ChevronRight:hover{
+    background-color: #fe8402;
+    border-color: #fe8402;
+}
+
+/* list of subject title css */
+ul {
+ padding-left: 0;
+}
+.subjectList ul{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    
+}
+
+.subjectList ul li{
+    padding: 2px;
+    margin: 2px;
+    font-size:0.45em;
+    border: 1px solid #ddd;
+}
+.subjectList ul li p{
+ margin-bottom: 0;
+ color: #516cf0;
+}
+.viewAnswerLink {
+   /* float: right; */
+   line-height: 25px;
+    padding: 5px 0px !important;
+    transition: box-shadow 0.3s ease-in-out, padding 0.2s ease-in;
+    border-radius: 6px;
+    background: #516cf0;
+    margin-top:24px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 150px;
+    cursor: pointer; 
+}
+.viewAnswerLink a {
+    text-decoration: none;
+    color: #fff !important;
+    margin-right: 0;
+}
+.viewAnswerLink:hover {
+   background-color: #fe8402;
+    border-color: #fe8402;
+}
+@media (min-width: 768px) {
+.onBoardflow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.onBoardQnDescription {
+    margin-bottom: 0;
+}
+.onboardAnswerlink {
+ border-right: 3px solid #ddd;
+}
+.onboardAnswerlink .countAnswer{
+    margin-right: 7px;
+}
+.subjectList {
+    position: absolute;
+    left: 121px;
+     /* margin-top: 14px;  */
+}
+.viewAnswerLink {
+   float: right;
+}
+.subjectList ul li{
+    padding: 3px;
+    margin: 3px;
+    font-size:0.6em;
+    border: 1px solid #ddd;
+}
+}

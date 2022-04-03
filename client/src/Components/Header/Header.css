@@ -5,14 +5,10 @@
     align-items:center;
     box-shadow: 0 2px 4px rgb(81 107 152 / 16%);
 }
-
-
 .innerContainer2{
     width: 400px;
     align-items: center;
 }
-
-
 .header__container{
     display: flex;
     align-items: center;

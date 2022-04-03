@@ -1,0 +1,81 @@
+.quesiotnContainer{
+  width: 450px;
+  align-items: center;
+  text-align: center;
+  height: 500px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgb(81 107 152 / 16%);
+  background-color: whitesmoke;
+
+}
+
+.subquesitonContainer{
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+}
+.questionTag{
+  font-size: 20px;
+  text-decoration: none;
+  color:#fe8402 ;
+}
+.questionTag:hover{
+   text-decoration: underline;
+   color:#337ab7;
+}
+
+.quesitonInput{
+  text-align: center;
+  width: 380px;
+  height: 50px;
+  border-radius: 15px;
+  margin: 15px auto ;
+}
+
+.quesitonText{
+  resize: none;
+  border-radius: 15px;
+  width: 380px;
+  height: 250px;
+  margin: 10px auto;
+  text-align: center;
+}
+.btnCB{
+  width: 200px;
+  align-self: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fe8402;
+  color: black;
+  font-weight: bolder;
+}
+.btnCB:hover{
+  background-color: #337ab7;
+  color: white;
+}
+.btnCB:active{
+  border:3px solid #fe8402;
+
+}
+.btnSub{
+  width:150px ;
+  align-self: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #fe8402;
+  color: black;
+  font-weight: bolder;
+}
+
+.btnSub:hover{
+  background-color: #337ab7;
+  color: white;
+}
+.btnSub:active{
+  border:3px solid #fe8402;
+
+}

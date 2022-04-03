@@ -25,14 +25,11 @@ const SignUp = () => {
           password: form.password,
         }
       );
-
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,
       });
-
       localStorage.setItem("auth-token", loginRes.data.token);
-
       navigate("/");
     } catch (error) {
       console.log("problem ==>", error.response.data.msg);
