@@ -52,7 +52,7 @@ const SignUp = () => {
    }
  };
   return (
-    <div className="container  d-md-flex mx-auto my-5">
+    <div className="container  d-md-flex mx-auto my-5 signup_container">
       <div className="containe mainn">
         <p className="p11">Join the network</p>
         <p className="p22 lorem">
@@ -122,7 +122,7 @@ const SignUp = () => {
           Already have an account?
         </Link>
       </div>
-      <div className="SignupNote d-none d-md-block">
+      <div className="SignupNote container mt-sm-5">
           <p className="forTitle">About</p>
           <h1>Evangadi Networks Q&A</h1>
           <p className="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>

@@ -17,9 +17,7 @@
 .logo {
 	padding-top: 40px;
 }
-h3 {
-	color: white;
-}
+
 .Useful-Link > a {
 	display: flex;
 	flex-direction: column;
@@ -34,6 +32,7 @@ h3 {
 }
 .titlee {
 	padding-top: 35px;
+	color: white;
 }
 .Contact-Info > p {
 	display: flex;

@@ -56,7 +56,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="container my-5 d-md-flex justify-content-between">
+    <div className="container my-5 d-md-flex justify-content-between login_container">
 
     <div className="main">
        <p className="p1">Login to your account</p>
@@ -75,7 +75,7 @@ const Login = () => {
             Create an account?
         </Link>
     </div>
-    <div className="sideNote2 d-none d-md-block">
+      <div className="sideNote2 container mt-sm-5">
       <p className="forTitle">About</p>
       <h1>Evangadi Networks Q&A</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>
