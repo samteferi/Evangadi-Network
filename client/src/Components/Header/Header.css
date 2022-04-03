@@ -1,9 +1,13 @@
 .header{
+    min-width: 500px;
     min-height: 10vh;
     background-color: white;
     display: flex;
     align-items:center;
     box-shadow: 0 2px 4px rgb(81 107 152 / 16%);
+}
+.innerContainer{
+    align-items:center;
 }
 .innerContainer2{
     width: 400px;
@@ -26,7 +30,6 @@ img{
     background: none;
     border: none;
     cursor: pointer;
-    padding-right: 343px;   
 }
 .ic:focus{
     outline: 0;
@@ -51,10 +54,8 @@ img{
     border-radius:4px ;
     font-weight: 400px;
     text-align: center;
-    vertical-align: middle;
     border: 1px solid transparent;
     font-size: 1rem;
-    margin-left: 10px;
 }
 .btn_header:hover{
     background-color: #FF8500;

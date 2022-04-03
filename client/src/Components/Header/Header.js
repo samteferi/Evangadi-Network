@@ -19,21 +19,17 @@ function Header1({ logout }) {
     <div className="header container-fluid">
       <div className="innerContainer container d-flex justify-content-around ">
         <Link to='/' className="header__image">
-          <img src={logo} alt="Evangadi logo"/>
+          <img src={logo} alt="Evangadi logo" />
         </Link>
         <button className='ic d-sm-block d-md-none'>
-               ☰
+          ☰
         </button>
-        <div className="d-flex  innerContainer2 justify-content-between">
+        <div className="d-flex  innerContainer2 justify-content-between d-none d-md-block">
           <a href="">Home</a>
           <a href="">How it Works</a>
-          <div className="rightSide__button">
-            <button className="btn_header" onClick={goToSignIn}>{userData.user? "LogOut" : "SIGN IN"}</button>
-          </div>
+          <button className="btn_header" onClick={goToSignIn}>{userData.user ? "LogOut" : "SIGN IN"}</button>
         </div>
-        
       </div>
-     
     </div>
   );
 }
