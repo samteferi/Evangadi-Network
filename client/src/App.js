@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import Footer from './Components/Footer/Footer';
 import Que from './Pages/AskQuestion/AskQuestion'
+import AnswerQuestion from './Pages/AnswerQuestion.js/AnswerQuestion';
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home logout={logout} />} />
         <Route path="/ask-question" element={<Que />} />
+        <Route path="/:id" element={<AnswerQuestion />} />
       </Routes>
       <Footer />
     </Router>

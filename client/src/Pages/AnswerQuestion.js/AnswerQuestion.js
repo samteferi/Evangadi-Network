@@ -1,7 +1,8 @@
 import React from 'react'
+import "./AnswerQuestion.css"
 import profile from "../../Images/Male User.png"
-import Ans from "../Answer/Ans"
-const SingleQuestion = () => {
+import Ans from "../../Components/Answer/Ans"
+const AnswerQuestion = () => {
   return (
       <div className="container">
           <div>
@@ -52,4 +53,4 @@ const SingleQuestion = () => {
   )
 }
 
-export default SingleQuestion
+export default AnswerQuestion
