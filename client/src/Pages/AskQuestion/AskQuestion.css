@@ -1,4 +1,5 @@
 .quesiotnContainer{
+  min-height: 65vh;
   width: 450px;
   align-items: center;
   text-align: center;

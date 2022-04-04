@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
-import Questions from '../../Components/QuesitonsP/Questions';
-import Que from '../../Components/Question/Que';
+import Que from '../AskQuestion/AskQuestion';
 import QuestionsNew from '../../Components/QuestionsNew/QuestionsNew';
 import SingleQuestion from '../../Components/SingleQuestion/SingleQuestion';
 import { UserContext } from '../../context/UserContext';
@@ -13,22 +12,29 @@ const Home = () => {
     useEffect(() => {
         if (!userData.user) navigate("/login");
     }, [userData.user, navigate]);
+    const handleClick = (e) => {
+        e.preventDefault();
+        navigate("/ask-question");
+    }
     return (
         <div className="container my-5 home-container">
-            <div className="d-flex justify-content-around">
-                <button className="ask_button">Ask Question</button>
+            <div className="d-flex mb-5 justify-content-between">
+                <button className="ask_button" onClick={handleClick}>Ask Question</button>
                 <h4>Welcome: {userData.user?.display_name}</h4>
             </div>
             <h3>Questions</h3>
-            {/* <div>
+            <div>
                 <hr />
                 <QuestionsNew />
                 <hr />
                 <QuestionsNew />
                 <hr />
                 <QuestionsNew />
-            </div> */}
-            <SingleQuestion/>
+            </div>
+
+
+            {/* change name to AnswerQuestion and setup new route */}
+            {/* <SingleQuestion/> */}
         </div>
     )
 }

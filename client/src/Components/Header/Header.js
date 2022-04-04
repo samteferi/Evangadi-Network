@@ -25,8 +25,8 @@ function Header1({ logout }) {
           ☰
         </button>
         <div className="d-flex  innerContainer2 justify-content-between d-none d-md-block">
-          <a href="">Home</a>
-          <a href="">How it Works</a>
+          <Link to="/">Home</Link>
+          <Link to="/">How it Works</Link>
           <button className="btn_header" onClick={goToSignIn}>{userData.user ? "LogOut" : "SIGN IN"}</button>
         </div>
       </div>

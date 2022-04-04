@@ -1,7 +1,16 @@
 .avatar {
-    border-radius: 100%;
-    background-color: darkgray;
-    width: 110px;
-    height: 110px;
-    padding-top: 0px;
+	border-radius: 100%;
+	background-color: darkgray;
+	width: 90px;
+	height: 90px;
+	padding-top: 0px;
+}
+.fa {
+	font-size: 33px;
+    font-weight: bolder;
+	color: #000;
+    cursor: pointer;
+}
+.fa:hover {
+	color: #da7000;
 }

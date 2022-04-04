@@ -3,7 +3,7 @@ import profile from "../../Images/Male User.png"
 import Ans from "../Answer/Ans"
 const SingleQuestion = () => {
   return (
-      <div class="container">
+      <div className="container">
           <div>
               <h3>Random Question</h3>
               <p>
@@ -19,16 +19,16 @@ const SingleQuestion = () => {
           </div>
 
           <hr />
-          <div class="d-md-flex">
-              <div class="d-flex flex-md-column">
+          <div className="d-md-flex">
+              <div className="d-flex flex-md-column">
                   <img
-                      class="avatar"
+                      className="avatar"
                       src={profile}
                       alt="User Avatar"
                   />
-                  <h6 className="align-self-center">USER NAME</h6>
+                  <h6 className="align-self-center ms-2 ms-md-0">USER NAME</h6>
               </div>
-              <div class="ms-md-5">
+              <div className="ms-md-5">
                   <p>
                       Answer descriptions... Lorem ipsum dolor sit amet consectetur
                       adipisicing elit. Sapiente amet nemo laudantium, quos velit

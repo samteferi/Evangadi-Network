@@ -8,10 +8,7 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import Footer from './Components/Footer/Footer';
-import Questions from './Components/QuesitonsP/Questions';
-import Que from '../src/Components/Question/Que'
-import DashBoard from './Pages/Dashboard/DashBoard'
-import Ans from './Components/Answer/Ans'
+import Que from './Pages/AskQuestion/AskQuestion'
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -27,7 +24,7 @@ function App() {
 
       setUserData({
         token,
-        user:userRes.data
+        user: userRes.data
       })
     }
   }
@@ -39,22 +36,22 @@ function App() {
     localStorage.setItem('auth-token', '');
   };
   useEffect(() => {
-   checkLoggedIn();
+    checkLoggedIn();
   }, []);
   return (
     <Router>
-         <Header1 logout={logout}/>
-        <Routes>
-          <Route path="/signup" element={<SignUp /> } />
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home logout={logout}/>} />
-        </Routes>
-        {/* <Ans/> */}
-        <Footer/>
+      <Header1 logout={logout} />
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home logout={logout} />} />
+        <Route path="/ask-question" element={<Que />} />
+      </Routes>
+      <Footer />
     </Router>
-   
 
- 
+
+
   )
 }
 export default App;
