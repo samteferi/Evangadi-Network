@@ -7,10 +7,15 @@
 }
 .fa {
 	font-size: 33px;
-    font-weight: bolder;
+	font-weight: bolder;
 	color: #000;
-    cursor: pointer;
+	cursor: pointer;
 }
 .fa:hover {
 	color: #da7000;
+}
+@media (min-width: 768px) {
+	.avatar-container {
+		max-width: 100px;
+	}
 }
