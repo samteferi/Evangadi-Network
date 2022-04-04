@@ -50,7 +50,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home logout={logout} />} />
         <Route path="/ask-question" element={<Que />} />
-        <Route path="/:id" element={<AnswerQuestion />} />
+        <Route path="/questions/:id" element={<AnswerQuestion />} />
       </Routes>
       <Footer />
     </Router>

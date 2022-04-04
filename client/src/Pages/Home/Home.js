@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import QuestionsNew from '../../Components/QuestionsNew/QuestionsNew';
 import { UserContext } from '../../context/UserContext';
 import "./Home.css";
@@ -37,10 +37,12 @@ const Home = () => {
                 {allQuestions.map(question =>
                     <div key={question.post_id}>
                         <hr />
-                        <QuestionsNew
-                            question={question.question}
-                            userName={question.user_name}
-                        />
+                        <Link to={`questions/${question.post_id}`} className="text-decoration-none text-reset">
+                            <QuestionsNew
+                                question={question.question}
+                                userName={question.user_name}
+                            />
+                        </Link>
                     </div>
                 )}
                 {/* <hr />
@@ -51,7 +53,7 @@ const Home = () => {
 
 
             {/* change name to AnswerQuestion and setup new route */}
-            <SingleQuestion/>
+            <SingleQuestion />
         </div>
     )
 }
