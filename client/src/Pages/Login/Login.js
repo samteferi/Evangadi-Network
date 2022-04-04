@@ -47,7 +47,7 @@ const Login = () => {
   // to change the icon when clicked
   const HandleIconChange = () => {
     // event listenforPassworder function
-    if (type == "password") {
+    if (type === "password") {
       setIcon(eye);
       setType("text");
     } else {

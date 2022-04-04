@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import Que from '../AskQuestion/AskQuestion';
 import QuestionsNew from '../../Components/QuestionsNew/QuestionsNew';
 import SingleQuestion from '../../Components/SingleQuestion/SingleQuestion';
 import { UserContext } from '../../context/UserContext';
@@ -8,9 +8,19 @@ import "./Home.css";
 
 const Home = () => {
     const [userData, setUserData] = useContext(UserContext);
+    const [allQuestions, setAllQuestions] = useState([]);
     const navigate = useNavigate();
+    const Questions = async () => {
+        try {
+            const questionRes = await axios.get('http://localhost:4000/api/questions');
+            setAllQuestions(questionRes.data.data);
+        } catch (err) {
+            console.log("problem", err);
+        }
+    }
     useEffect(() => {
         if (!userData.user) navigate("/login");
+        Questions();
     }, [userData.user, navigate]);
     const handleClick = (e) => {
         e.preventDefault();
@@ -24,12 +34,16 @@ const Home = () => {
             </div>
             <h3>Questions</h3>
             <div>
-                <hr />
+                {allQuestions.map(question =>
+                    <div key={question.post_id}>
+                        <hr />
+                        <QuestionsNew question={question.question}/>
+                    </div>
+                )}
+                {/* <hr />
                 <QuestionsNew />
                 <hr />
-                <QuestionsNew />
-                <hr />
-                <QuestionsNew />
+                <QuestionsNew /> */}
             </div>
 
 
