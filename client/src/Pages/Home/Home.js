@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import QuestionsNew from '../../Components/QuestionsNew/QuestionsNew';
 import { UserContext } from '../../context/UserContext';
 import "./Home.css";
-import AnswerQuestion from '../AnswerQuestion.js/AnswerQuestion';
+import SingleQuestion from '../SingleQuestion/SingleQuestion';
 
 const Home = () => {
     const [userData, setUserData] = useContext(UserContext);
@@ -51,7 +51,7 @@ const Home = () => {
 
 
             {/* change name to AnswerQuestion and setup new route */}
-            <AnswerQuestion/>
+            <SingleQuestion/>
         </div>
     )
 }
