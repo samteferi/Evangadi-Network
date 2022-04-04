@@ -37,7 +37,10 @@ const Home = () => {
                 {allQuestions.map(question =>
                     <div key={question.post_id}>
                         <hr />
-                        <QuestionsNew question={question.question}/>
+                        <QuestionsNew
+                            question={question.question}
+                            userName={question.user_name}
+                        />
                     </div>
                 )}
                 {/* <hr />

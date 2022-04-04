@@ -19,7 +19,7 @@ module.exports = {
         );
     },
     getAllQuestions: (callback) => {
-        pool.query(`SELECT question,question_description,question_code_block,tags,post_id FROM question ORDER BY question_id DESC`, [], (err, result) => {
+        pool.query(`SELECT registration.user_name, question,question_description,question_code_block,tags,post_id FROM question JOIN registration ON question.user_id = registration.user_id  ORDER BY question_id DESC`, [], (err, result) => {
             if (err) {
                 return callback(err);
             }
