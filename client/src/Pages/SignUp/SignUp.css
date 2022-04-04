@@ -27,7 +27,7 @@
 	border: silver 1px solid;
 	padding-left: 10px;
 	font-size: 17px;
-	margin-right: 20px;
+	margin-right: 4px;
 }
 
 form {
@@ -70,7 +70,7 @@ form {
 .a33 {
 	color: #ff8500 !important;
 	margin: 20px;
-	padding-left: 120px;
+
 }
 .mainn {
 	background-color: whitesmoke;
@@ -91,7 +91,7 @@ form {
 	text-decoration: underline;
 }
 .containe {
-	width: 500px;
+	/* width: 500px; */
 	margin: auto;
 }
 .SignupNote {

@@ -1,5 +1,5 @@
 .quesiotnContainer{
-  width: 450px;
+  /* width: 450px; */
   align-items: center;
   text-align: center;
   height: 500px;
@@ -31,7 +31,7 @@
 .quesitonText{
   resize: none;
   border-radius: 15px;
-  width: 380px;
+  /* width: 380px; */
   height: 250px;
   margin: 10px auto;
   text-align: center;

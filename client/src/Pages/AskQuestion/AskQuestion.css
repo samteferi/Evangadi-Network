@@ -1,6 +1,6 @@
 .quesiotnContainer{
   min-height: 65vh;
-  width: 450px;
+  /* width: 450px; */
   align-items: center;
   text-align: center;
   height: 500px;
@@ -12,11 +12,13 @@
 }
 
 .subquesitonContainer{
-    width: 400px;
+    /* width: 400px; */
     height: 500px;
     margin: 0 auto;
    display: flex;
    flex-direction: column;
+   box-shadow: 0 2px 4px rgb(81 107 152 / 16%);
+   background-color: whitesmoke;
 }
 .questionTag{
   font-size: 20px;
@@ -30,7 +32,7 @@
 
 .quesitonInput{
   text-align: center;
-  width: 380px;
+  /* width: 380px; */
   height: 50px;
   border-radius: 15px;
   margin: 15px auto ;
@@ -39,13 +41,13 @@
 .quesitonText{
   resize: none;
   border-radius: 15px;
-  width: 380px;
+  /* width: 380px; */
   height: 250px;
   margin: 10px auto;
   text-align: center;
 }
 .btnCB{
-  width: 200px;
+  /* width: 200px; */
   align-self: center;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -63,20 +65,21 @@
 
 }
 .btnSub{
-  width:150px ;
+  width:200px ;
+  height: 40.97px;
   align-self: center;
   border-radius: 5px;
   border: none;
-  background-color: #fe8402;
+  background-color: #516cf0;
   color: black;
   font-weight: bolder;
 }
 
 .btnSub:hover{
-  background-color: #337ab7;
+  background-color: #fe8402;
   color: white;
 }
 .btnSub:active{
-  border:3px solid #fe8402;
+  border:3px solid #516cf0;
 
 }
