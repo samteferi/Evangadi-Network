@@ -16,8 +16,8 @@ export default function AskQuestion() {
           <input
             type="text"
             name=""
-            placeholder="Question"
-            className="quesitonInput col-md-12 "
+            placeholder="Your Question "
+            className="quesitonInput col-md-12 col-sm-6"
           />
           <textarea
             className="quesitonText d-block col-md-12"

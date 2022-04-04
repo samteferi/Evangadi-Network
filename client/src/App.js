@@ -56,7 +56,7 @@ function App() {
     //   <Footer />
     // </Router>
          <div>
-           {/* <AskQuestion/> */}
+           <AskQuestion/>
            <AnswerQuestion/>
          </div>
 

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Ans() {
   return (
-    <div className="quesiotnContainer  mt-5 col-md-12">
-      <form action="" className="col-md-12 mx-auto my-auto">
+    <div className="quesiotnContainer  mt-5 col-md-12 ">
+      <form action="" className="col-md-12 col-sm-6 mx-auto my-auto">
       <div className="subquesitonContainer  ">
         <h3 className="text-dark">Answer From The Community</h3>
         <a className="questionTag" href="">
