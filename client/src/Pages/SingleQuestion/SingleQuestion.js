@@ -11,7 +11,7 @@ const SingleQuestion = () => {
     const questionByPostId = async () => {
         try {
             const question = await axios.get(`http://localhost:4000/api/questions/${params.id}`);
-            setQuestionId(question.data.data.question_id)
+            setQuestionId(question.data.data.question_id);
         } catch (err) {
             console.log("problem", err);
         }
@@ -20,6 +20,7 @@ const SingleQuestion = () => {
         try {
             const answersRes = await axios.get(`http://localhost:4000/api/answer/${questionId}`);
             console.log(answersRes)
+            setAnswers(answersRes.data.data);
         } catch (err) {
             console.log("problem", err);
         }
@@ -27,7 +28,7 @@ const SingleQuestion = () => {
     useEffect(() => {
         questionByPostId();
         answersByQuestionId();
-    }, []);
+    }, [questionId]);
     return (
         <div className="container">
             <div>
