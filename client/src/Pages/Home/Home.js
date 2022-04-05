@@ -1,10 +1,9 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
-import QuestionsNew from '../../Components/Question/Question';
 import { UserContext } from '../../context/UserContext';
 import "./Home.css";
-import SingleQuestion from '../QuestionDetail/QuestionDetail';
+import Question from '../../Components/Question/Question';
 
 const Home = () => {
     const [userData, setUserData] = useContext(UserContext);
@@ -38,7 +37,7 @@ const Home = () => {
                     <div key={question.post_id}>
                         <hr />
                         <Link to={`questions/${question.post_id}`} className="text-decoration-none text-reset">
-                            <QuestionsNew
+                            <Question
                                 question={question.question}
                                 userName={question.user_name}
                             />

@@ -18,8 +18,7 @@ const SingleQuestion = () => {
     }
     const answersByQuestionId = async () => {
         try {
-            const answersRes = await axios.get(`http://localhost:4000/api/answer/${question.question_id}`);
-            console.log(answersRes)
+            const answersRes = await axios.get(`http://localhost:4000/api/answer/${question?.question_id}`);
             setAnswers(answersRes.data.data);
         } catch (err) {
             console.log("problem", err);
@@ -28,7 +27,7 @@ const SingleQuestion = () => {
     useEffect(() => {
         questionByPostId();
         answersByQuestionId();
-    }, [question]);
+    }, [question?.question_id]);
     return (
         <div className="container my-5">
             <div>
@@ -44,7 +43,6 @@ const SingleQuestion = () => {
             <div>
                 <h3>Answers</h3>
             </div>
-            {/* change name to QuestionDetail */}
             {answers.map(answer =>
                 <div key={answer.answer_id}>
                     <Answer
