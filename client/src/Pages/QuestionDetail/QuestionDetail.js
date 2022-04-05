@@ -41,7 +41,7 @@ const SingleQuestion = () => {
             </div>
             <hr />
             <div>
-                <h3>Answers</h3>
+                {answers.length > 0 && <h3>Answer From The Community</h3>}
             </div>
             {answers.map(answer =>
                 <div key={answer.answer_id}>

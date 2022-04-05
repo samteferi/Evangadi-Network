@@ -1,26 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import "./AnswerQuestion.css"
 
 const AnswerQuestion = () => {
   return (
-    <div className="quesiotnContainer">
-      <div className="subquesitonContainer">
-        <h3 className="text-dark">Answer From The Community</h3>
-        <a className="questionTag" href="">
+    <div className="container my-5">
+      <form className="d-flex flex-column p-5 answer_form  justify-content-between">
+        <h3 className="">Answer The Top Question</h3>
+        <Link to="/" className="text-decoration-none text-reset cursor-pointer">
           Go to Question page
-        </a>
+        </Link>
         <textarea
-          className="quesitonText d-block"
+          className="answer_input"
           placeholder="Your Answer..."
           name=""
           id=""
         ></textarea>
-        <button className="btnCB" type="">
-          Show Code Block
+        <button className="answer_post_btn" type="">
+          Post Your Answer
         </button>
-        <button className="btnSub" type="">
-          Submit
-        </button>
-      </div>
+      </form>
     </div>
   )
 }
