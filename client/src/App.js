@@ -9,7 +9,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import Footer from './Components/Footer/Footer';
 import Que from './Pages/AskQuestion/AskQuestion'
-import AnswerQuestion from './Pages/SingleQuestion/SingleQuestion';
+import AnswerQuestion from './Pages/QuestionDetail/QuestionDetail';
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 

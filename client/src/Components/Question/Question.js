@@ -1,8 +1,8 @@
 import React from 'react'
-import "./QuestionsNew.css";
+import "./Question.css";
 import profile from "../../Images/Male User.png"
 
-const QuestionsNew = ({question,userName}) => {
+const Question = ({question,userName}) => {
     return (
         <div className="d-md-flex align-items-center justify-space-between">
             <div className="d-flex flex-md-column avatar-container">
@@ -19,4 +19,4 @@ const QuestionsNew = ({question,userName}) => {
     )
 }
 
-export default QuestionsNew
+export default Question
