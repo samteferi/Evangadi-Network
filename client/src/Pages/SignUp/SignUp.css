@@ -1,3 +1,8 @@
+.sign_page {
+	background-image: url("../../Images/bg-svg-f.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .signup_container{
 	min-height: 65vh;
 	align-items: center;

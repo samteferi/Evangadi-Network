@@ -1,4 +1,9 @@
-.login_container{
+.login_page {
+	background-image: url("../../Images/bg-svg-f.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.login_container {
 	min-height: 65vh;
 	align-items: center;
 }
@@ -20,7 +25,7 @@ form {
 	font-size: 15px;
 }
 .main {
-	background-color:whitesmoke;
+	background-color: whitesmoke;
 	padding: 15px;
 	margin: auto;
 	border-radius: 8px;
@@ -58,11 +63,9 @@ form {
 }
 .a3 {
 	color: #ff8500;
-    margin: 82px;
+	margin: 82px;
 	padding-left: 50px;
-
 }
-
 
 .sideNote2 {
 	width: 600px;
@@ -107,7 +110,7 @@ h1 {
 .showHide2 {
 	display: flex;
 	justify-content: flex-end;
-	margin:-52px 25px 0px 360px;
-    opacity: 0.65;
-    cursor: pointer;
+	margin: -52px 25px 0px 360px;
+	opacity: 0.65;
+	cursor: pointer;
 }
