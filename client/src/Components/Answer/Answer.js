@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../../Images/Male User.png'
+import profile from '../../Images/User.png'
 const Answer = ({answer,userName}) => {
     return (
         <div>

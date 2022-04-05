@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Question.css";
-import profile from "../../Images/Male User.png"
+import profile from "../../Images/User.png"
 
 const Question = ({question,userName}) => {
     return (
