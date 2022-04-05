@@ -40,6 +40,7 @@ const SingleQuestion = () => {
                     {question?.question_description}
                 </p>
             </div>
+            <hr />
             <div>
                 <h3>Answers</h3>
             </div>
