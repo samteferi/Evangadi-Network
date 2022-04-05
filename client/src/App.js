@@ -10,7 +10,7 @@ function App() {
   const [userData, setUserData] = useContext(UserContext);
 
   const checkLoggedIn = async () => {
-    let token = localStorage.getItem('auth.token');
+    let token = localStorage.getItem('auth-token');
     if (token === null) {
       localStorage.setItem('auth-token', '');
       token = '';
@@ -21,7 +21,10 @@ function App() {
 
       setUserData({
         token,
-        user:userRes.data
+        user: {
+          id: userRes.data.data.user_id,
+          display_name: userRes.data.data.user_name
+        }
       })
     }
   }
@@ -36,7 +39,7 @@ function App() {
   };
 
   useEffect(() => {
-   checkLoggedIn();
+    checkLoggedIn();
   }, []);
   return (
     <Router>
@@ -44,7 +47,7 @@ function App() {
         <Routes>
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home logout={logout}/>} />
+          <Route path="/" element={<Home logout={logout} />} />
         </Routes>
       </div>
     </Router>
