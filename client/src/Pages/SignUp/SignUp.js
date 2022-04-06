@@ -36,13 +36,11 @@ const SignUp = () => {
     }
   };
 
-
-
   // to change type attribute from 'password' to 'text' and vice versa
   const [icon, setIcon] = useState(eyeOff);
   // to change the icon when clicked
   const HandleIconChange = () => {
-    // event listenforPassworder function
+    // event listen for Password function
     if (type === "password") {
       setIcon(eye);
       setType("text");
@@ -53,8 +51,8 @@ const SignUp = () => {
   };
   return (
     <div className="container-fluid sign_page">
-      <div className="container  d-md-flex mx-auto py-5 signup_container">
-        <div className="containe mainn">
+      <div className="container d-md-flex mx-auto py-5 align-items-center">
+        <div className="form_wrapper col-12 col-md-6 me-md-2 p-5 d-flex flex-column">
           <p className="p11">Join the network</p>
           <p className="p22 lorem">
             Already have an account?
@@ -64,7 +62,7 @@ const SignUp = () => {
           </p>
           <form onSubmit={handleSubmit}>
             <input
-              className="in11 mr-1 in11i "
+              className="in11 mr-1"
               name="email"
               onChange={handleChange}
               type="email"
@@ -72,7 +70,7 @@ const SignUp = () => {
             />
             <div className="FLname d-flex">
               <input
-                className="in11 in11F"
+                className="in11 me-1"
                 name="firstName"
                 onChange={handleChange}
                 type="text"
@@ -80,7 +78,7 @@ const SignUp = () => {
               />
 
               <input
-                className="in11 in11L"
+                className="in11 ms-1"
                 name="lastName"
                 onChange={handleChange}
                 type="text"
@@ -89,7 +87,7 @@ const SignUp = () => {
             </div>
 
             <input
-              className="in11 in11i"
+              className="in11"
               name="userName"
               onChange={handleChange}
               type="text"
@@ -97,18 +95,18 @@ const SignUp = () => {
             />
 
             <input
-              className="in11 in11i"
+              className="in11"
               onChange={handleChange}
               name="password"
               type={type}
               placeholder="Password"
             />
-            <span onClick={HandleIconChange} className="showHide">
-              <Icon icon={icon} size={20} />
+            <span className="showHide">
+              <Icon icon={icon} size={20} onClick={HandleIconChange} />
             </span>
             <button className="btnSign">Agree and Join</button>
           </form>
-          <p className="mt-md-5 mt-sm-5  texttag">
+          <p className="mt-md-5 mt-sm-5 text-center texttag">
             I agree to the
             <Link to="" className="a22">
               privacy policy
@@ -120,11 +118,11 @@ const SignUp = () => {
           </p>
           
 
-          <Link to="/login" className="a33">
+          <Link to="/login" className="a33 text-center">
             Already have an account?
           </Link>
         </div>
-        <div className="SignupNote container mt-sm-5">
+        <div className="SignupNote container col-12 col-md-6 ms-md-2  mt-sm-5">
           <p className="forTitle">About</p>
           <h1>Evangadi Networks Q&A</h1>
           <p className="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>

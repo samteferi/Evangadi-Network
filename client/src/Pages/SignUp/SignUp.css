@@ -2,8 +2,9 @@
 	background-image: url("../../Images/bg-svg-f.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: whitesmoke;
 }
-.signup_container{
+.signup_container {
 	min-height: 65vh;
 	align-items: center;
 }
@@ -15,7 +16,6 @@
 	color: #2d385e;
 }
 .texttag {
-	padding-left: 50px;
 	margin-top: 15px;
 }
 .p22 {
@@ -32,7 +32,6 @@
 	border: silver 1px solid;
 	padding-left: 10px;
 	font-size: 17px;
-	margin-right: 20px;
 }
 
 form {
@@ -61,7 +60,7 @@ form {
 	border-radius: 5px;
 	border: 1.5px;
 	font-size: 20px;
-	margin-bottom: 15px;
+	margin-top: 28px;
 	font-family: "Lato", sans-serif;
 	text-align: center;
 }
@@ -74,13 +73,11 @@ form {
 }
 .a33 {
 	color: #ff8500 !important;
-	margin: 20px;
-	padding-left: 120px;
 }
-.mainn {
-	background-color: whitesmoke;
+.form_wrapper {
 	border-radius: 15px;
-	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+	background: #fcfbfb;
+	box-shadow: 17px 17px 34px #d0d0d0;
 }
 .showHide {
 	display: flex;
