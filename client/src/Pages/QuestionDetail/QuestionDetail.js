@@ -52,7 +52,9 @@ const SingleQuestion = () => {
                 </div>
             )}
 
-            <AnswerQuestion />
+            <AnswerQuestion
+                questionId={question?.question_id}               
+            />
         </div>
     )
 }
