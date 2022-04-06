@@ -9,13 +9,14 @@ import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
 const SignUp = () => {
   const [form, setForm] = useState({});
+  const [userData, setUserData] = useContext(UserContext);  const [type, setType] = useState("password");
   const navigate = useNavigate();
-  const [userData, setUserData] = useContext(UserContext);
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("hi");
     try {
       await axios.post("http://localhost:4000/api/users", form);
       const loginRes = await axios.post(
@@ -36,7 +37,7 @@ const SignUp = () => {
     }
   };
 
-  const [type, setType] = useState("password");
+
 
   // to change type attribute from 'password' to 'text' and vice versa
   const [icon, setIcon] = useState(eyeOff);
@@ -106,6 +107,7 @@ const SignUp = () => {
             <span onClick={HandleIconChange} className="showHide">
               <Icon icon={icon} size={20} />
             </span>
+            <button className="btnSign">Agree and Join</button>
           </form>
           <p className="mt-md-5 mt-sm-5  texttag">
             I agree to the
@@ -117,7 +119,7 @@ const SignUp = () => {
               terms of serivice.
             </Link>
           </p>
-          <button className="btnSign">Agree and Join</button>
+          
 
           <Link to="/login" className="a33">
             Already have an account?
