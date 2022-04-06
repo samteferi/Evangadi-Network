@@ -41,31 +41,31 @@ module.exports = {
                                 .status(500)
                                 .json({ msg: "database connection err" });
                         }
-                    })
-                    pool.query('SELECT * FROM registration WHERE user_email = ?',
-                        [email],
-                        (err, results) => {
-                            if (err) {
-                                return res
-                                    .status(err)
-                                    .json({ msg: "database connection err" })
-                            }
-                            req.body.userId = results[0].user_id;
-                            console.log(req.body);
-                            profile(req.body, (err, results) => {
+                        pool.query('SELECT * FROM registration WHERE user_email = ?',
+                            [email],
+                            (err, results) => {
                                 if (err) {
-                                    console.log(err);
                                     return res
-                                        .status(500)
-                                        .json({ msg: "database connection err" });
+                                        .status(err)
+                                        .json({ msg: "database connection err" })
                                 }
-                                return res.status(200).json({
-                                    msg: "New user added successfully",
-                                    data: results
+                                req.body.userId = results[0].user_id;
+                                console.log(req.body);
+                                profile(req.body, (err, results) => {
+                                    if (err) {
+                                        console.log(err);
+                                        return res
+                                            .status(500)
+                                            .json({ msg: "database connection err" });
+                                    }
+                                    return res.status(200).json({
+                                        msg: "New user added successfully",
+                                        data: results
+                                    })
                                 })
-                            })
-                        }
-                    );
+                            }
+                        );
+                    })
                 }
             })
     },
