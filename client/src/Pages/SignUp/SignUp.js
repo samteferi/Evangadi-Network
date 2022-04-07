@@ -33,6 +33,7 @@ const SignUp = () => {
       navigate("/");
     } catch (error) {
       console.log("problem ==>", error.response.data.msg);
+      alert(error.response.data.msg);
     }
   };
 
