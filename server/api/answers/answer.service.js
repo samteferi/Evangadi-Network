@@ -18,7 +18,7 @@ module.exports = {
     },
     answerByQuestionId: (id, callback) => {
         //id is questionId
-        pool.query(`SELECT * From answer WHERE question_id = ?`, [id], (err, result) => {
+        pool.query(`SELECT answer_id, answer, answer_code_block, question_id, registration.user_id, registration.user_name FROM answer LEFT JOIN registration ON answer.user_id = registration.user_id WHERE answer.question_id = ?`, [id], (err, result) => {
             if (err) {
                 return callback(err);
             }
