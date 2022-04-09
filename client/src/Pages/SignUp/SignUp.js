@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useContext, useState } from "react";
-=======
 import React, { useContext, useEffect, useState } from "react";
->>>>>>> r2
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { UserContext } from "../../context/UserContext";
@@ -53,45 +49,6 @@ const SignUp = () => {
       setIcon(eyeOff);
       setType("password");
     }
-<<<<<<< HEAD
-    return (
-        <div>
-            <h1>SignUp</h1>
-            <form onSubmit={handleSubmit}>
-                <label>First Name: </label>
-                <input
-                    type="text"
-                    name="firstName"
-                    onChange={handleChange}
-                /><br />
-                <label>Last Name: </label>
-                <input
-                    type="text"
-                    name="lastName"
-                    onChange={handleChange}
-                /><br />
-                <label>User Name: </label>
-                <input
-                    type="text"
-                    name="userName"
-                    onChange={handleChange}
-                /><br />
-                <label>Email: </label>
-                <input
-                    type="text"
-                    name="email"
-                    onChange={handleChange}
-                /><br />
-                <label>Password: </label>
-                <input
-                    type="password"
-                    name="password"
-                    onChange={handleChange}
-                /><br />
-                <button>submit</button>
-            </form>
-            <Link to="/login">Already have an account?</Link>
-=======
   };
   return (
     <div className="container-fluid sign_page">
@@ -173,7 +130,6 @@ const SignUp = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptate officiis beatae nobis pariatur omnis facere accusamus laboriosam hic, adipisci vero reiciendis, recusandae sit ad, eum quisquam! Molestias, ut commodi!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolor odio harum sunt, quaerat, molestias fuga expedita ad excepturi officiis aliquam aut nemo ratione culpa id laborum ipsum porro tempore?</p>
           <button className="btn1">HOW IT WORKS</button>
->>>>>>> r2
         </div>
       </div>
     </div>

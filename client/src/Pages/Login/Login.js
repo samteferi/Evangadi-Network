@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
-
-=======
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,7 +7,6 @@ import './Login.css'
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
->>>>>>> r2
 const Login = () => {
   const [userData, setUserData] = useContext(UserContext);
   const navigate = useNavigate();
@@ -29,15 +21,9 @@ const Login = () => {
         "http://localhost:4000/api/users/login",
         {
           email: form.email,
-<<<<<<< HEAD
-          password: form.password
-        });
-      console.log(loginRes)
-=======
           password: form.password,
         }
       );
->>>>>>> r2
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,
@@ -46,11 +32,7 @@ const Login = () => {
       localStorage.setItem("auth-token", loginRes.data.token);
       navigate("/");
     } catch (err) {
-<<<<<<< HEAD
-      console.log('problem', err.response.data.msg);
-=======
       console.log("problem", err);
->>>>>>> r2
       alert(err.response.data.msg);
     }
   };
@@ -74,31 +56,6 @@ const Login = () => {
     }
   };
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Email: </label>
-        <input
-          type="text"
-          name="email"
-          onChange={handleChange}
-        /><br />
-        <label>Password: </label>
-        <input
-          type="password"
-          name="password"
-          onChange={handleChange}
-        /><br />
-        <button>submit</button>
-      </form>
-      <Link to="/signup">Create a new account</Link>
-    </div>
-  )
-}
-
-export default Login
-=======
     <div className="container-fluid login_page">
       <div className="container py-5 d-md-flex justify-content-between login_container">
         <div className="main col-12 col-md-6 me-md-2 p-5 d-flex flex-column justify-content-center">
@@ -133,17 +90,3 @@ export default Login
 };
 
 export default Login;
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> r2

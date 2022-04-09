@@ -19,10 +19,7 @@ const Home = () => {
     }
     useEffect(() => {
         if (!userData.user) navigate("/login");
-<<<<<<< HEAD
-=======
         Questions();
->>>>>>> r2
     }, [userData.user, navigate]);
     const handleClick = (e) => {
         e.preventDefault();
