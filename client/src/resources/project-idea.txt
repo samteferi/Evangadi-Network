@@ -40,7 +40,7 @@ Discussion forum - MVP
 
     - A text box at the top to share useful links 
 
-    - The latests post or question will be showed at the top 
+    - The latest post or question will be showed at the top 
 
     - On the right side of the page, there  will be a menu to filter out questions by section 
       - When clicked on a specific section, questions specific to that section will show 
