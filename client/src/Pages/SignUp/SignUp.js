@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../../axios";
 import { UserContext } from "../../context/UserContext";
 import "./SignUp.css";
 //to import icons 
@@ -17,9 +17,9 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/users", form);
+      await axios.post("/api/users", form);
       const loginRes = await axios.post(
-        "http://localhost:4000/api/users/login",
+        "/api/users/login",
         {
           email: form.email,
           password: form.password,

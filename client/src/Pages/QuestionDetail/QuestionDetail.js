@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./QuestionDetail.css"
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../../axios'
 import AnswerQuestion from '../../Components/AnswerQuestion/AnswerQuestion'
 import Answer from '../../Components/Answer/Answer'
 const SingleQuestion = () => {
@@ -10,7 +10,7 @@ const SingleQuestion = () => {
     const [answers, setAnswers] = useState([]);
     const questionByPostId = async () => {
         try {
-            const question = await axios.get(`http://localhost:4000/api/questions/${params.id}`);
+            const question = await axios.get(`/api/questions/${params.id}`);
             setQuestion(question.data.data);
         } catch (err) {
             console.log("problem", err);
@@ -18,7 +18,7 @@ const SingleQuestion = () => {
     }
     const answersByQuestionId = async () => {
         try {
-            const answersRes = await axios.get(`http://localhost:4000/api/answer/${question?.question_id}`);
+            const answersRes = await axios.get(`/api/answer/${question?.question_id}`);
             setAnswers(answersRes.data.data);
         } catch (err) {
             console.log("problem", err);

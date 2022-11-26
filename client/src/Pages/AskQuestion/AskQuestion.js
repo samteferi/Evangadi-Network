@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./AskQuestion.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
-import axios from "axios";
+import axios from "../../axios";
 
 export default function AskQuestion() {
   const [userData, setUserData] = useContext(UserContext);
@@ -14,7 +14,7 @@ export default function AskQuestion() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/questions",
+      await axios.post("/api/questions",
         {
           id:userData.user.id,
           question: form.question,

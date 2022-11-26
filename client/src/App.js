@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from './axios';
 import { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -19,7 +19,7 @@ function App() {
       localStorage.setItem('auth-token', '');
       token = '';
     } else {
-      const userRes = await axios.get('http://localhost:4000/api/users', {
+      const userRes = await axios.get('/api/users', {
         headers: { 'x-auth-token': token }
       });
       // console.log(userRes);

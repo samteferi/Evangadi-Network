@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../axios';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
@@ -13,7 +13,7 @@ const AnswerQuestion = ({ questionId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/answer",
+      await axios.post("/api/answer",
         {
           id: userData.user.id,
           questionId: questionId,

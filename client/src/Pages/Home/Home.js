@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from '../../context/UserContext';
@@ -11,7 +11,7 @@ const Home = () => {
     const navigate = useNavigate();
     const Questions = async () => {
         try {
-            const questionRes = await axios.get('http://localhost:4000/api/questions');
+            const questionRes = await axios.get('/api/questions');
             setAllQuestions(questionRes.data.data);
         } catch (err) {
             console.log("problem", err);

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const loginRes = await axios.post(
-        "http://localhost:4000/api/users/login",
+        "/api/users/login",
         {
           email: form.email,
           password: form.password,
